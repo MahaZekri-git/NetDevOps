@@ -33,7 +33,12 @@ This table details the cabling and interface assignments for the entire topology
 |🔁 S1|E0/0|🖥️ SRV1|Ens2|VLAN 10 Access|
 |🔁 S1|E0/1|🖥️ SRV2|Ens2|VLAN 20 Access|
 |🔁 S1|E0/2|🖥️ SRV3|Ens2|VLAN 20 Access|
-
+| Device | Local Port | Remote Device | Remote Port | Purpose |
+|--------|------------|---------------|-------------|---------|
+| R1     | E0/0       | S1            | E0/3        | Trunk Link |
+| S1     | E0/0       | SRV1          | ens2        | VLAN 10 Access |
+| S1     | E0/1       | SRV2          | ens2        | VLAN 20 Access |
+| S1     | E0/2       | SRV3          | ens2        | VLAN 20 Access |
 --------------------------------------------------------------------------------
 🧪 Deployment Goals<br>
 VLAN Implementation: Assign specific switch ports to their respective VLANs (10 or 20)<br>
