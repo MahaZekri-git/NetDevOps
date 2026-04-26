@@ -1,9 +1,12 @@
 🌐 Project: Router on the Stick
+#
 Layer 2 Isolation & Layer 3 Routing
+#
 This lab explores a standard hierarchical network architecture, focusing on the logical separation of server resources through VLAN configuration.
 
 --------------------------------------------------------------------------------
 🏗️ The Infrastructure
+#
 The topology utilizes a structured approach to connect and manage network endpoints:
 🔘 The Gateway (R1): A central Router providing the path for inter-VLAN communication
 .
