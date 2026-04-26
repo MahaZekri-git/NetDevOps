@@ -1,26 +1,24 @@
-🌐 Project: Router on the Stick
-#
-Layer 2 Isolation & Layer 3 Routing
-#
+🌐 Project: Router on the Stick <br>
+Layer 2 Isolation & Layer 3 Routing<br>
 This lab explores a standard hierarchical network architecture, focusing on the logical separation of server resources through VLAN configuration.
 
 --------------------------------------------------------------------------------
-🏗️ The Infrastructure
-#
-The topology utilizes a structured approach to connect and manage network endpoints:
-🔘 The Gateway (R1): A central Router providing the path for inter-VLAN communication
+🏗️ The Infrastructure<br>
+
+The topology utilizes a structured approach to connect and manage network endpoints:<br>
+🔘 The Gateway (R1): A central Router providing the path for inter-VLAN communication<br>
 .
-🔁 The Distribution (S1): A Switch managing the physical connections and logical VLAN assignments
+🔁 The Distribution (S1): A Switch managing the physical connections and logical VLAN assignments<br>
 .
-🖥️ The Endpoints: Three Servers (SRV1, SRV2, SRV3) distributed across different network segments
+🖥️ The Endpoints: Three Servers (SRV1, SRV2, SRV3) distributed across different network segments<br>
 .
 
 --------------------------------------------------------------------------------
-🎨 Logical Segmentation
-The network is partitioned into two distinct virtual segments to manage traffic flow:
-🏷️ VLAN 10
-Host: 🖥️ SRV1
-Access Port: Connected to interface E0/0 on the switch
+🎨 Logical Segmentation<br>
+The network is partitioned into two distinct virtual segments to manage traffic flow:<br>
+🏷️ VLAN 10<br>
+Host: 🖥️ SRV1<br>
+Access Port: Connected to interface E0/0 on the switch<br>
 .
 🏷️ VLAN 20
 Hosts: 🖥️ SRV2 & 🖥️ SRV3
