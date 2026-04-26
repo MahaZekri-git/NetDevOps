@@ -1,0 +1,402 @@
+annotations:
+  - border_color: '#808080FF'
+    border_radius: 0
+    border_style: ''
+    color: '#D4F8FB'
+    rotation: 0
+    thickness: 1
+    type: rectangle
+    x1: 40.0
+    y1: 120.0
+    x2: 200.0
+    y2: 80.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: VLAN 20
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 40.0
+    y1: 120.0
+    z_index: 1
+  - border_color: '#808080FF'
+    border_radius: 0
+    border_style: ''
+    color: '#E7CFCF'
+    rotation: 0
+    thickness: 1
+    type: rectangle
+    x1: -160.0
+    y1: 120.0
+    x2: 160.0
+    y2: 80.0
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: VLAN 10
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -160.0
+    y1: 120.0
+    z_index: 3
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 1114 bytes
+          !
+          ! Last configuration change at 18:46:49 UTC Sun Apr 26 2026
+          !
+          version 17.16
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          !
+          hostname R1
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          no aaa new-model
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          login on-success log
+          no ipv6 cef
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          memory free low-watermark processor 79983
+          !
+          !
+          spanning-tree mode rapid-pvst
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Ethernet0/0
+           no ip address
+          !
+          interface Ethernet0/0.10
+           encapsulation dot1Q 10
+           ip address 192.168.10.1 255.255.255.0
+          !
+          interface Ethernet0/0.20
+           encapsulation dot1Q 20
+           ip address 192.168.20.1 255.255.255.0
+          !
+          interface Ethernet0/1
+           no ip address
+           shutdown
+          !
+          interface Ethernet0/2
+           no ip address
+           shutdown
+          !
+          interface Ethernet0/3
+           no ip address
+           shutdown
+          !
+          ip forward-protocol nd
+          ip forward-protocol udp
+          !
+          !
+          ip http server
+          ip http secure-server
+          ip ssh bulk-mode 131072
+          no logging btrace
+          !
+          !
+          !
+          control-plane
+          !
+          !
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input ssh
+          !
+          !
+          !
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: R1
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: 80
+    y: -200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: hostname S1
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: S1
+    node_definition: ioll2-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: 80
+    y: -40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: user-data
+        content: |-
+          #cloud-config
+          hostname: SRV1
+          manage_etc_hosts: True
+          system_info:
+            default_user:
+              name: cisco
+          password: cisco
+          chpasswd: { expire: False }
+          ssh_pwauth: True
+          ssh_authorized_keys:
+            - your-ssh-pubkey-line-goes-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: SRV1
+    node_definition: ubuntu
+    parameters: {}
+    ram: null
+    tags: []
+    x: -40
+    y: 160
+    interfaces:
+      - id: i0
+        label: ens2
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: user-data
+        content: |-
+          #cloud-config
+          hostname: SRV2
+          manage_etc_hosts: True
+          system_info:
+            default_user:
+              name: cisco
+          password: cisco
+          chpasswd: { expire: False }
+          ssh_pwauth: True
+          ssh_authorized_keys:
+            - your-ssh-pubkey-line-goes-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: SRV2
+    node_definition: ubuntu
+    parameters: {}
+    ram: null
+    tags: []
+    x: 80
+    y: 160
+    interfaces:
+      - id: i0
+        label: ens2
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: user-data
+        content: |-
+          #cloud-config
+          hostname: SRV3
+          manage_etc_hosts: True
+          system_info:
+            default_user:
+              name: cisco
+          password: cisco
+          chpasswd: { expire: False }
+          ssh_pwauth: True
+          ssh_authorized_keys:
+            - your-ssh-pubkey-line-goes-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: SRV3
+    node_definition: ubuntu
+    parameters: {}
+    ram: null
+    tags: []
+    x: 200
+    y: 160
+    interfaces:
+      - id: i0
+        label: ens2
+        mac_address: null
+        type: physical
+        slot: 0
+links:
+  - id: l0
+    n1: n1
+    n2: n0
+    i1: i4
+    i2: i1
+    conditioning: {}
+    label: S1-Ethernet0/3<->R1-Ethernet0/0
+  - id: l1
+    n1: n1
+    n2: n2
+    i1: i1
+    i2: i0
+    conditioning: {}
+    label: S1-Ethernet0/0<->SRV1-ens2
+  - id: l2
+    n1: n1
+    n2: n3
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: S1-Ethernet0/1<->SRV2-ens2
+  - id: l3
+    n1: n1
+    n2: n4
+    i1: i3
+    i2: i0
+    conditioning: {}
+    label: S1-Ethernet0/2<->SRV3-ens2
+lab:
+  description: ''
+  notes: ''
+  title: Lab at Sun 14:35 PM
+  version: 0.3.0
