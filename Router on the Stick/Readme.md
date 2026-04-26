@@ -7,11 +7,11 @@ This lab explores a standard hierarchical network architecture, focusing on the 
 
 The topology utilizes a structured approach to connect and manage network endpoints:<br>
 🔘 The Gateway (R1): A central Router providing the path for inter-VLAN communication<br>
-.
+
 🔁 The Distribution (S1): A Switch managing the physical connections and logical VLAN assignments<br>
-.
+
 🖥️ The Endpoints: Three Servers (SRV1, SRV2, SRV3) distributed across different network segments<br>
-.
+
 
 --------------------------------------------------------------------------------
 🎨 Logical Segmentation<br>
@@ -19,15 +19,15 @@ The network is partitioned into two distinct virtual segments to manage traffic 
 🏷️ VLAN 10<br>
 Host: 🖥️ SRV1<br>
 Access Port: Connected to interface E0/0 on the switch<br>
-.
-🏷️ VLAN 20
-Hosts: 🖥️ SRV2 & 🖥️ SRV3
-Access Ports: Connected to interfaces E0/1 and E0/2 respectively
-.
+
+🏷️ VLAN 20<br>
+Hosts: 🖥️ SRV2 & 🖥️ SRV3<br>
+Access Ports: Connected to interfaces E0/1 and E0/2 respectively<br>
+
 
 --------------------------------------------------------------------------------
-🔌 Physical Connection Map
-This table details the cabling and interface assignments for the entire topology:
+🔌 Physical Connection Map<br>
+This table details the cabling and interface assignments for the entire topology:<br>
 Device
 Local Port
 Remote Device
@@ -55,12 +55,12 @@ Ens2
 VLAN 20 Access
 
 --------------------------------------------------------------------------------
-🧪 Deployment Goals
-VLAN Implementation: Assign specific switch ports to their respective VLANs (10 or 20)
-.
-Inter-VLAN Routing: Configure the 🔘 Router to enable communication between 🖥️ SRV1 and the servers in the other segment
-.
-Local Connectivity: Verify that 🖥️ SRV2 and 🖥️ SRV3 can communicate directly within the same segment
+🧪 Deployment Goals<br>
+VLAN Implementation: Assign specific switch ports to their respective VLANs (10 or 20)<br>
+
+Inter-VLAN Routing: Configure the 🔘 Router to enable communication between 🖥️ SRV1 and the servers in the other segment<br>
+
+Local Connectivity: Verify that 🖥️ SRV2 and 🖥️ SRV3 can communicate directly within the same segment<br>
 
 <img width="847" height="618" alt="image" src="https://github.com/user-attachments/assets/c97ca84f-91fc-435b-ae45-ce6e7da5c33f" />
 
