@@ -28,31 +28,11 @@ Access Ports: Connected to interfaces E0/1 and E0/2 respectively<br>
 --------------------------------------------------------------------------------
 🔌 Physical Connection Map<br>
 This table details the cabling and interface assignments for the entire topology:<br>
-Device
-Local Port
-Remote Device
-Remote Port
-Purpose
-🔘 R1
-E0/0
-🔁 S1
-E0/3
-Trunk Link
-🔁 S1
-E0/0
-🖥️ SRV1
-Ens2
-VLAN 10 Access
-🔁 S1
-E0/1
-🖥️ SRV2
-Ens2
-VLAN 20 Access
-🔁 S1
-E0/2
-🖥️ SRV3
-Ens2
-VLAN 20 Access
+|Device|Local Port|Remote Device|Remote Port|Purpose|
+|🔘 R1|E0/0|🔁 S1|E0/3|Trunk Link|
+|🔁 S1|E0/0|🖥️ SRV1|Ens2|VLAN 10 Access|
+|🔁 S1|E0/1|🖥️ SRV2|Ens2|VLAN 20 Access|
+|🔁 S1|E0/2|🖥️ SRV3|Ens2|VLAN 20 Access|
 
 --------------------------------------------------------------------------------
 🧪 Deployment Goals<br>
