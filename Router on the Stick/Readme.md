@@ -43,6 +43,7 @@ Inter-VLAN Routing: Configure the 🔘 Router to enable communication between �
 
 Local Connectivity: Verify that 🖥️ SRV2 and 🖥️ SRV3 can communicate directly within the same segment<br>
 
-<img width="847" height="618" alt="image" src="https://github.com/user-attachments/assets/c97ca84f-91fc-435b-ae45-ce6e7da5c33f" />
+
+<img width="746" height="786" alt="image" src="https://github.com/user-attachments/assets/d7b3ed57-a634-4db4-87b8-c9e5af63fa23" />
 
 
