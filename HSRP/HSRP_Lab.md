@@ -32,12 +32,13 @@ The Setup: You have configured Sw1 as the "Active" gateway with a priority of 11
 .
 The Incident: The upstream link from Sw1 to the Net (Gi0/1) experiences a hardware failure
 . However, the link between Sw1 and the internal switch (SW) remains active.
-The Solution (What you should demonstrate):
+## The Solution:
 Configure Object Tracking: On Sw1, configure HSRP to track the status of interface Gi0/1.
 Priority Decrement: If Gi0/1 goes down, Sw1's HSRP priority should automatically decrement by 20 (dropping from 110 to 90).
 Active/Standby Handover: Because Sw1's priority is now lower than Sw2's (100), Sw2 must immediately transition to the "Active" state to handle all traffic directed to the .254 gateway
 .
-Verification: Run a traceroute from PC1 to the Net. You should see the traffic path switch from 192.168.2.1 to 192.168.2.2 transparently, without the PC ever losing connection to its gateway.
+## Verification:
+Run a traceroute from PC1 to the Net. You should see the traffic path switch from 192.168.2.1 to 192.168.2.2 transparently, without the PC ever losing connection to its gateway.
 ##
 <img width="720" height="772" alt="image" src="https://github.com/user-attachments/assets/e8579425-09d8-4b22-98d9-88fbc591e19e" />
 
