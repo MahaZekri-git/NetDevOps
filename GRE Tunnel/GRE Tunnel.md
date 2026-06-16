@@ -25,8 +25,8 @@ The lab is built in **EVE-NG** and follows this architecture:
 | **R2** | Tunnel0 | 172.16.1.2/24 | GRE Tunnel Interface |
 | **PC2** | eth0 | 192.168.2.2/24 | End Host (Site B) |
 ## 🚀 Lab Objectives
-1.  **Underlay Reachability:** Configure the ISP and Site routers to ensure `1.1.1.1` can ping `2.2.2.2`. [1]
-2.  **GRE Tunnel Establishment:** Configure a logical Tunnel interface using public IPs as sources/destinations. [1]
+1.  **Underlay Reachability:** Configure the ISP and Site routers to ensure `1.1.1.1` can ping `2.2.2.2`.
+2.  **GRE Tunnel Establishment:** Configure a logical Tunnel interface using public IPs as sources/destinations.
 3.  **Dynamic Routing (EIGRP):** Deploy EIGRP AS 100 to exchange LAN routes (`192.168.1.0/24` and `192.168.2.0/24`) over the tunnel.
 4.  **MTU Optimization:** Adjust the TCP MSS to 1360 to account for the GRE encapsulation overhead.
    ## 🛠️ Configuration Highlights
@@ -53,3 +53,5 @@ Check Tunnel Status: show interface tunnel 0 (Should be Up/Up).
 EIGRP Neighbors: show ip eigrp neighbors (Should list the peer tunnel IP).
 Routing Table: show ip route eigrp (R1 should see the 192.168.2.0/24 network).
 Connectivity Test: Ping from PC1 to PC2 (ping 192.168.2.2).
+<img width="1091" height="507" alt="Capture d’écran 2026-06-16 234048" src="https://github.com/user-attachments/assets/c2043392-2e0a-41c1-9bb3-588b60de307b" />
+
