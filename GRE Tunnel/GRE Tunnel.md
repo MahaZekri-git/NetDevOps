@@ -29,29 +29,6 @@ The lab is built in **EVE-NG** and follows this architecture:
 2.  **GRE Tunnel Establishment:** Configure a logical Tunnel interface using public IPs as sources/destinations.
 3.  **Dynamic Routing (EIGRP):** Deploy EIGRP AS 100 to exchange LAN routes (`192.168.1.0/24` and `192.168.2.0/24`) over the tunnel.
 4.  **MTU Optimization:** Adjust the TCP MSS to 1360 to account for the GRE encapsulation overhead.
-   ## 🛠️ Configuration Highlights
-
-### 1. GRE Tunnel Setup
-Establishing the point-to-point logical link.
-
-**R1:**
-```ios
-interface Tunnel0
- ip address 172.16.1.1 255.255.255.0
- tunnel source 1.1.1.1
- tunnel destination 2.2.2.2
- ip tcp adjust-mss 1360
-2. EIGRP Overlay Routing
-Configuring the dynamic exchange of internal subnets.
-R1:
-router eigrp 100
- network 172.16.1.0 0.0.0.255
- network 192.168.1.0 0.0.0.255
- no auto-summary
-✅ Verification & Troubleshooting
-Check Tunnel Status: show interface tunnel 0 (Should be Up/Up).
-EIGRP Neighbors: show ip eigrp neighbors (Should list the peer tunnel IP).
-Routing Table: show ip route eigrp (R1 should see the 192.168.2.0/24 network).
-Connectivity Test: Ping from PC1 to PC2 (ping 192.168.2.2).
+ 
 <img width="1091" height="507" alt="Capture d’écran 2026-06-16 234048" src="https://github.com/user-attachments/assets/c2043392-2e0a-41c1-9bb3-588b60de307b" />
 
