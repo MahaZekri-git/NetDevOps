@@ -44,6 +44,9 @@ interface FastEthernet0/0
 Defining which traffic to translate and applying the PAT rule.
 access-list 1 permit 192.168.2.0 0.0.0.255
 ip nat inside source list 1 interface FastEthernet0/0 overload
-
+#
 <img width="1041" height="582" alt="Capture d’écran 2026-06-19 132241" src="https://github.com/user-attachments/assets/056dc716-9b97-41a4-a79c-8633063d0f26" />
+
+
+
 
