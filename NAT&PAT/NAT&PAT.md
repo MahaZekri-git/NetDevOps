@@ -44,10 +44,5 @@ interface FastEthernet0/0
 Defining which traffic to translate and applying the PAT rule.
 access-list 1 permit 192.168.2.0 0.0.0.255
 ip nat inside source list 1 interface FastEthernet0/0 overload
-✅ Verification & Troubleshooting
-Check Translation Table: show ip nat translations (Run this while pinging from PC1 to the Linux host).
-NAT Statistics: show ip nat statistics (To verify hits and misses on the translation rules).
 
 <img width="1041" height="582" alt="image" src="https://github.com/user-attachments/assets/7978a153-fd9a-443d-a902-3829cbfaa0f6" />
-
-Connectivity Test: From PC1, run ping 192.168.1.x. On the destination Linux host, the traffic should appear as coming from 192.168.1.100.
