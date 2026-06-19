@@ -1,4 +1,6 @@
 # Enterprise Edge NAT/PAT Implementation Lab (EVE-NG)
+<img width="1041" height="582" alt="Capture d’écran 2026-06-19 132241" src="https://github.com/user-attachments/assets/056dc716-9b97-41a4-a79c-8633063d0f26" />
+
 
 ## 📌 Project Overview
 This lab demonstrates the implementation of **Dynamic NAT with Overload (PAT)** on an Enterprise Edge router. The objective is to allow multiple internal hosts with private IPv4 addresses (192.168.2.0/24) to access external resources on a public network (192.168.1.0/24) using a single public-facing IP address.
@@ -46,7 +48,6 @@ access-list 1 permit 192.168.2.0 0.0.0.255
 ip nat inside source list 1 interface FastEthernet0/0 overload
 ```
 #
-<img width="1041" height="582" alt="Capture d’écran 2026-06-19 132241" src="https://github.com/user-attachments/assets/056dc716-9b97-41a4-a79c-8633063d0f26" />
 
 
 
