@@ -45,14 +45,10 @@ router bgp 65011
  neighbor 10.0.0.2 remote-as 65011 (iBGP to C1B)
  network 192.0.2.0 mask 255.255.255.0
 ✅ Verification & Troubleshooting
-HSRP Status: show standby brief on C1A/C1B to verify Active/Standby states
-.
-BGP Adjacencies: show ip bgp summary to ensure all eBGP and iBGP sessions are "Established"
-.
-Best Path Selection: show ip bgp to examine the BGP table and verify which provider path is preferred for specific prefixes
-.
+HSRP Status: show standby brief on C1A/C1B to verify Active/Standby states.
+BGP Adjacencies: show ip bgp summary to ensure all eBGP and iBGP sessions are "Established".
+Best Path Selection: show ip bgp to examine the BGP table and verify which provider path is preferred for specific prefixes.
 Failover Test: Shut down the primary link on C1A and verify that traffic reroutes through C1B via BGP convergence.
-💻 Requirements
-EVE-NG (Community or Professional).
-Cisco vIOS or IOL Router images.
-VPCS or Linux nodes for PC1 and PC2
+<img width="1737" height="842" alt="Capture d’écran 2026-07-04 132836" src="https://github.com/user-attachments/assets/4e29504d-cf10-4091-9484-635b65a093e5" />
+
+
