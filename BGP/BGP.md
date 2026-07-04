@@ -1,4 +1,5 @@
 # Multi-Site Enterprise Redundancy: BGP Multi-Homing & HSRP Lab
+<img width="1737" height="842" alt="Capture d’écran 2026-07-04 132836" src="https://github.com/user-attachments/assets/4e29504d-cf10-4091-9484-635b65a093e5" />
 
 ## 📌 Project Overview
 This project simulates a high-availability enterprise network architecture across multiple Autonomous Systems (AS). It demonstrates advanced routing and redundancy techniques, including **BGP Multi-Homing** for resilient internet/WAN connectivity and **HSRP (Hot Standby Router Protocol)** for internal gateway redundancy.
@@ -49,6 +50,6 @@ HSRP Status: show standby brief on C1A/C1B to verify Active/Standby states.
 BGP Adjacencies: show ip bgp summary to ensure all eBGP and iBGP sessions are "Established".
 Best Path Selection: show ip bgp to examine the BGP table and verify which provider path is preferred for specific prefixes.
 Failover Test: Shut down the primary link on C1A and verify that traffic reroutes through C1B via BGP convergence.
-<img width="1737" height="842" alt="Capture d’écran 2026-07-04 132836" src="https://github.com/user-attachments/assets/4e29504d-cf10-4091-9484-635b65a093e5" />
+
 
 
